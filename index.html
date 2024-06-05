@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar Energy Yield Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Solar Energy Yield Calculator</h1>
+        <form id="calculatorForm">
+            <label for="solarCapacity">Solar Capacity (in kW):</label>
+            <input type="text" id="solarCapacity" name="solarCapacity" required>
+
+            <label for="noOfDays">Number of Days:</label>
+            <input type="text" id="noOfDays" name="noOfDays" required>
+
+            <label for="temperatureCoefficient">Temperature Coefficient (%):</label>
+            <input type="text" id="temperatureCoefficient" name="temperatureCoefficient" required>
+
+            <label for="shadowLossPercentage">Shadow Loss Percentage (%):</label>
+            <input type="text" id="shadowLossPercentage" name="shadowLossPercentage" required>
+
+            <label for="place">Place:</label>
+            <input type="text" id="place" name="place" required>
+
+            <label for="startTime">Start Time (MM-DD-YYYY):</label>
+            <input type="text" id="startTime" name="startTime" required>
+
+            <label for="endTime">End Time (MM-DD-YYYY):</label>
+            <input type="text" id="endTime" name="endTime" required>
+
+            <label for="noOfYears">Number of Years:</label>
+            <input type="number" id="noOfYears" name="noOfYears" required>
+
+            <label for="csvFile">Upload Dataset1.csv:</label>
+            <input type="file" id="csvFile" name="csvFile" accept=".csv" required>
+
+            <button type="submit">Calculate</button>
+        </form>
+        <div id="results"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
